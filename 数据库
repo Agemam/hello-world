@@ -12,31 +12,31 @@ create table SCourse(
 */
 select COUNT(Ssex) from Student
 
-select COUNT(*) as ȫ��ѧ������ from Student
+select COUNT(*) as 全体学生人数 from Student
 
 select MAX(Sage) from Student
 
 select AVG(Sage) from Student
 
-select * from Student where Ssex='Ů'
+select * from Student where Ssex='女'
 
-select * from Student where Ssex='��' and Sage<20
+select * from Student where Ssex='男' and Sage<20
 
-select * from Student order by Sage asc/*����*/
+select * from Student order by Sage asc/*升序*/
 
-select * from Student order by Sage desc/*����*/
+select * from Student order by Sage desc/*降序*/
 
-select * from Student where Ssex='��' and Sage<20 order by Sage asc
+select * from Student where Ssex='男' and Sage<20 order by Sage asc
 
-select Sname,count(*)as ͬ������ from Student group by Sname
+select Sname,count(*)as ͬ同名人数 from Student group by Sname
 
-select Ssex,count(*)as �Ա����� from Student group by Ssex
+select Ssex,count(*)as 性别人数 from Student group by Ssex
 
-select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex
+select Ssex,count(*)as 性别人数 from Student where Sage<=20 group by Ssex
 
-select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex having COUNT(*)>2
+select Ssex,count(*)as 性别人数 from Student where Sage<=20 group by Ssex having COUNT(*)>2
 
-select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex having MAX(Sage)>=20
+select Ssex,count(*)as 性别人数 from Student where Sage<=20 group by Ssex having MAX(Sage)>=20
 
 
 
