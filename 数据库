@@ -1,1 +1,42 @@
 SQL数据库
+/*
+use text
+
+create table SCourse(
+	Cno char(2),
+	Cname varchar(10),
+	Cpno char(2),
+	Ccredit int
+	/*foreign key (Cpno) references SCourse(Cno)*/
+);
+*/
+select COUNT(Ssex) from Student
+
+select COUNT(*) as ȫ��ѧ������ from Student
+
+select MAX(Sage) from Student
+
+select AVG(Sage) from Student
+
+select * from Student where Ssex='Ů'
+
+select * from Student where Ssex='��' and Sage<20
+
+select * from Student order by Sage asc/*����*/
+
+select * from Student order by Sage desc/*����*/
+
+select * from Student where Ssex='��' and Sage<20 order by Sage asc
+
+select Sname,count(*)as ͬ������ from Student group by Sname
+
+select Ssex,count(*)as �Ա����� from Student group by Ssex
+
+select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex
+
+select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex having COUNT(*)>2
+
+select Ssex,count(*)as �Ա����� from Student where Sage<=20 group by Ssex having MAX(Sage)>=20
+
+
+
